@@ -22,13 +22,13 @@ class LibrosFactory extends Factory
     public function definition()
     {
         return [
+
             'titulo'=>$this->faker->sentence(),
             'autor'=>$this->faker->sentence(),
             'editorial' =>$this->faker->sentence(),
             'fecha_de_publicacion' =>$this->faker->date(),
-            'numero_de_paginas' =>$this->faker->integer()
+            'numero_de_paginas' =>$this->faker->randomNumber()
 
-          
            
         ];
     }

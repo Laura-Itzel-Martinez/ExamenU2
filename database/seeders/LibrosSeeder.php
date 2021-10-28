@@ -22,6 +22,8 @@ class LibrosSeeder extends Seeder
             $libros->numero_de_paginas = 5;
             $libros->save();
 
+           
+
             
 
     }
