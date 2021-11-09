@@ -1,7 +1,9 @@
 <?php
 
-use App\Http\Controllers\LibrosController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LibrosController;
+//use App\Http\Controllers\HomeController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,4 +15,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/' , [LibrosController::class, 'index'])->name('index');
+
+
+Route::get('/libros', [LibrosController::class, 'index'])->name('index');
+
+Route::delete('/libros/{libro}', [LibrosController::class, 'destroy'])->name('destroy');
+
+Route::get('/libros/{libro}/edit', [LibrosController::class, 'edit'])->name('edit');
+Route::put('/udpate/{libro}', [LibrosController::class, 'update'])->name('update');
+
